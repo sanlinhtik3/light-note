@@ -59,7 +59,7 @@ export default async function Home() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <LoadButton>Save</LoadButton>
+              <LoadButton className="w-full">Save</LoadButton>
             </CardFooter>
           </form>
         </Card>
@@ -87,9 +87,9 @@ export default async function Home() {
                   value={t.id}
                   className="border"
                 />
-                <Button type="submit" variant="outline" size="icon">
+                <LoadButton variant="outline" size="icon" className="w-full">
                   <CheckCircle2 className="h-4 w-4" />
-                </Button>
+                </LoadButton>
               </form>
               <form action={del}>
                 <input
@@ -98,9 +98,9 @@ export default async function Home() {
                   value={t.id}
                   className="border"
                 />
-                <Button type="submit" variant="outline" size="icon">
+                <LoadButton variant="outline" size="icon" className="w-full">
                   <Trash2 className="h-4 w-4" />
-                </Button>
+                </LoadButton>
               </form>
 
               <div>
