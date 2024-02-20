@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CheckCircle2, ChevronRight, Github, Send, Trash2 } from "lucide-react";
 import Link from "next/link";
+import { LoadButton } from "./components/load-button";
 
 async function getData() {
   const data = await db.todo.findMany({ orderBy: { createdAt: "desc" } });
@@ -58,7 +59,7 @@ export default async function Home() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button className="w-full">Save</Button>
+              <LoadButton>Save</LoadButton>
             </CardFooter>
           </form>
         </Card>
