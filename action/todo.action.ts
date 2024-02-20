@@ -6,15 +6,19 @@ import { revalidatePath } from "next/cache";
 export async function create(formData: FormData) {
   const title = formData.get("title") as string;
 
-  const todo = await db.todo.create({
-    data: {
-      title: title,
-    },
-  });
+  try {
+    const todo = await db.todo.create({
+      data: {
+        title: title,
+      },
+    });
 
-  console.log("Todo have been created.");
+    console.log("Todo have been created.");
 
-  revalidatePath("/");
+    revalidatePath("/");
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function check(formData: FormData) {
