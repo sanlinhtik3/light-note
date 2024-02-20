@@ -16,6 +16,7 @@ export async function create(formData: FormData) {
     console.log("Todo have been created.");
 
     revalidatePath("/");
+    return todo;
   } catch (error) {
     console.log(error);
   }
