@@ -38,14 +38,14 @@ export default async function Home() {
       </div>
       <div>
         <Card className="">
-          <CardHeader>
-            <CardTitle>Create a Note</CardTitle>
-            <CardDescription>
-              One click to create a note. That secure and lightweight.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form action={create}>
+          <form action={create}>
+            <CardHeader>
+              <CardTitle>Create a Note</CardTitle>
+              <CardDescription>
+                One click to create a note. That secure and lightweight.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="name">Name</Label>
@@ -56,11 +56,11 @@ export default async function Home() {
                   />
                 </div>
               </div>
-            </form>
-          </CardContent>
-          <CardFooter className="flex justify-between">
-            <Button className="w-full">Save</Button>
-          </CardFooter>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              <Button className="w-full">Save</Button>
+            </CardFooter>
+          </form>
         </Card>
       </div>
 
