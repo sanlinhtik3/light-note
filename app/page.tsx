@@ -13,7 +13,8 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CheckCircle2, ChevronRight, Send, Trash2 } from "lucide-react";
+import { CheckCircle2, ChevronRight, Github, Send, Trash2 } from "lucide-react";
+import Link from "next/link";
 
 async function getData() {
   const data = await db.todo.findMany({ orderBy: { createdAt: "desc" } });
@@ -25,6 +26,16 @@ export default async function Home() {
 
   return (
     <div className="mx-auto mt-10 grid max-w-screen-xl gap-5 px-2 lg:grid-cols-2 lg:px-0">
+      <div className=" col-span-2">
+        <Button size="icon" asChild>
+          <Link
+            href="https://github.com/sanlinhtik3/light-note"
+            target="_blank"
+          >
+            <Github className="h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
       <div>
         <Card className="">
           <CardHeader>

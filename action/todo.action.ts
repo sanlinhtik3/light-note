@@ -26,7 +26,7 @@ export async function check(formData: FormData) {
     },
   });
 
-  const com = !todo.isCompleted;
+  const com = true;
 
   await db.todo.update({
     where: { id: id },
